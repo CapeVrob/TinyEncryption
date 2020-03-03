@@ -1,0 +1,8 @@
+{C:/Users/Aiman Priester/Desktop/Lets Fix My Broken 281 Project!!!/ALU/TEA_ALU.v} {1 {vlog -work work -stats=none {C:/Users/Aiman Priester/Desktop/Lets Fix My Broken 281 Project!!!/ALU/TEA_ALU.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module TEA_ALU
+
+Top level modules:
+	TEA_ALU
+
+} {} {}}

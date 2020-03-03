@@ -25,5 +25,21 @@ module TEA_ALU (
 
 	      aluResult0 = temp_v0;
    	    aluResult1 = temp_v1;
-        end
+        end //End Case if Encrypt
+
+      if (E_D == 1) begin //Case if Decrypt
+        temp_v0 = V0;
+        temp_v1 = V1;
+        sum = 8'hE0;
+
+        for(i = 0; i < 32; i = i + 1) begin
+          sum = sum + delta;
+          temp_v0 = temp_v0 + ((temp_v1 << 4) + Key0) ^ (temp_v1 + sum) ^ ((temp_v1 >> 5) + Key1); //EDIT THIS
+          temp_v1 = temp_v1 + ((temp_v0 << 4) + Key2) ^ (temp_v0 + sum) ^ ((temp_v0 >> 5) + Key3); //EDIT THIS
+          end
+        aluResult0 = temp_v0;
+     	  aluResult1 = temp_v1;
+        end //End case if Decrypt
    end
+
+endmodule
